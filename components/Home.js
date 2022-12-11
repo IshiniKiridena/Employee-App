@@ -18,6 +18,12 @@ export default function Home({ navigation }) {
           title="Add new employee"
           onPress={() => navigation.navigate("Add Employee")}
         ></Button>
+        <Text>{"\n"}</Text>
+        <Button
+          style={styles.btn}
+          title="Add to Blockchain"
+          onPress={() => navigation.navigate("Add to blockchain")}
+        ></Button>
       </View>
     </View>
   );
