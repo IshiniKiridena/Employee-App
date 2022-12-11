@@ -13,7 +13,11 @@ export default function Home({ navigation }) {
           onPress={() => navigation.navigate("Employees")}
         ></Button>
         <Text>{"\n"}</Text>
-        <Button style={styles.btn} title="Add new employee"></Button>
+        <Button
+          style={styles.btn}
+          title="Add new employee"
+          onPress={() => navigation.navigate("Add Employee")}
+        ></Button>
       </View>
     </View>
   );
