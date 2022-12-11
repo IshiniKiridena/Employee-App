@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "./components/Home";
 import EmployeeView from "./components/Employees";
 import AddEmployee from "./components/AddEmployee";
+import OneEmployee from "./components/OneEmployee";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +16,10 @@ export default function App() {
         <Stack.Screen
           name="Add Employee"
           component={AddEmployee}
+        ></Stack.Screen>
+        <Stack.Screen
+          name="One employee"
+          component={OneEmployee}
         ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
