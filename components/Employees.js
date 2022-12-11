@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { StyleSheet, FlatList, Text, View } from "react-native";
+import { StyleSheet, FlatList, Text, View, Button } from "react-native";
 import { ActivityIndicator } from "react-native";
 
-export default function EmployeeView() {
+export default function EmployeeView({ navigation }) {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
@@ -33,10 +33,18 @@ export default function EmployeeView() {
           data={data}
           keyExtractor={({ id }, index) => id}
           renderItem={({ item }) => (
-            <Text>
-              {item.employee_name}, {item.employee_salary},{item.employee_name},
-              {item.employee_age}
-            </Text>
+            <>
+              <Text>
+                {item.employee_name}, {item.employee_salary},
+                {item.employee_name},{item.employee_age}
+              </Text>
+              <Button
+                title="View"
+                onPress={() =>
+                  navigation.push("One employee", { userId: item.id })
+                }
+              ></Button>
+            </>
           )}
         ></FlatList>
       )}
