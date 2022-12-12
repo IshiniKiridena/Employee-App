@@ -4,6 +4,7 @@ import HomeScreen from "./components/Home";
 import EmployeeView from "./components/Employees";
 import AddEmployee from "./components/AddEmployee";
 import OneEmployee from "./components/OneEmployee";
+import SendToBlockchain from "./components/SendToBlockchain";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,10 @@ export default function App() {
         <Stack.Screen
           name="One employee"
           component={OneEmployee}
+        ></Stack.Screen>
+        <Stack.Screen
+          name="Blockchain"
+          component={SendToBlockchain}
         ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
